@@ -1,0 +1,45 @@
+<div class="background">
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col col-md-6">
+          <form [formGroup]="userform" #myForm="ngForm" (ngSubmit)="submit(myForm)" class="setbortder">
+            <div class="userreg">
+              <h5>User Register Form</h5>
+            </div>
+            ID*:<input type="number" class="form-control" formControlName="id" deat
+              [ngClass]="{'is-invalid':submitted && userform.controls.id.errors}" />
+            <p *ngIf="submitted && userform.controls.id.errors">
+              <span *ngIf="userform.controls.id.errors.required">
+                ID is required
+              </span>
+            </p>
+  
+            Name*:<input type="text" class="form-control" formControlName="username"
+              [ngClass]="{'is-invalid':submitted && userform.controls.username.errors}" />
+            <p *ngIf="submitted && userform.controls.username.errors">
+              <span *ngIf="userform.controls.username.errors.required">
+                user name is required
+              </span>
+    
+            </p>
+  
+            Phone Number:<input type="number" class="form-control" formControlName="phone"
+              [ngClass]="{'is-invalid':submitted && userform.controls.phone.errors}">
+  
+            <p *ngIf="submitted && userform.controls.phone.errors">
+              <span *ngIf="userform.controls.phone.errors.required">
+                Phone Number is required
+              </span>
+            </p>
+           
+           <div class="row justify-content-center pt-4">
+              <button class="btn btn-primary" type="submit">Submit</button>
+              <a class="nav-link" routerLink="userlist">User List</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  

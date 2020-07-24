@@ -1,0 +1,21 @@
+<div class="container mt-5">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone Number</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let userdata of userlistdis">
+        <td>{{userdata.id}}</td>
+        <td>{{userdata.username}}</td>
+        <td>{{userdata.phone}}</td>
+
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
